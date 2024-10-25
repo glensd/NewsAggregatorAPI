@@ -58,9 +58,12 @@ User Authentication
     POST /api/register
     - Body: { "name": "user", "email": "user@example.com", "password": "password", "password_confirmation": "password" }
   **Login**    
+
     POST /api/login
     - Body: { "email": "user@example.com", "password": "password" }
+
     **Logout**
+
     POST /api/logout
     **Reset Password**
     POST /api/reset-password
