@@ -42,40 +42,42 @@ Welcome to the News Aggregator API! This is a RESTful API built with Laravel tha
     ```bash
     php artisan key:generate
 
-5.Set up your database connection in the .env file. 
-6.Run the migrations: 
+5.Set up your database connection in the .env file and Run the migrations: 
     ```bash
     php artisan migrate
-
-7.Start the server: 
+    
+6.Start the server: 
     ```bash
     php artisan serve
 
-**API Endpoints
-User Authentication
-    Register a new user**
+## API Endpoints
+## User Authentication
 
+## Register a new user
     POST /api/register
     - Body: { "name": "user", "email": "user@example.com", "password": "password", "password_confirmation": "password" }
-  **Login**    
 
+    
+## Login
     POST /api/login
     - Body: { "email": "user@example.com", "password": "password" }
 
-    **Logout**
-
+## Logout
     POST /api/logout
-    **Reset Password**
+    
+## Reset Password
     POST /api/reset-password
     - Body: { "email": "user@example.com", "new_password": "newPassword123" }
 
-**Article Management**
-    **Fetch all articles**
+## Article Management
+## Fetch all articles
     GET - /api/articles
-    **Search articles**
+    
+## Search articles
     GET - /api/articles/search?keyword=someKeyword
-    **Retrieve a single article**
+    
+## Retrieve a single article
     GET - /api/articles/{id}
 
-**Usage**
+## Usage
 After setting up the API and starting the server, you can use tools like Postman or cURL to interact with the API endpoints.
