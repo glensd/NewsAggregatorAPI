@@ -50,10 +50,10 @@ Welcome to the News Aggregator API! This is a RESTful API built with Laravel tha
     ```bash
     php artisan serve
 
-## API Endpoints
+# API Endpoints
 ## User Authentication
 
-## Register a new user
+### Register a new user
     POST /api/register
     - Body: { "name": "user", "email": "user@example.com", "password": "password", "password_confirmation": "password" }
 
@@ -62,21 +62,21 @@ Welcome to the News Aggregator API! This is a RESTful API built with Laravel tha
     POST /api/login
     - Body: { "email": "user@example.com", "password": "password" }
 
-## Logout
+### Logout
     POST /api/logout
     
-## Reset Password
+### Reset Password
     POST /api/reset-password
     - Body: { "email": "user@example.com", "new_password": "newPassword123" }
 
 ## Article Management
-## Fetch all articles
+### Fetch all articles
     GET - /api/articles
     
-## Search articles
+### Search articles
     GET - /api/articles/search?keyword=someKeyword
     
-## Retrieve a single article
+### Retrieve a single article
     GET - /api/articles/{id}
 
 ## Usage
