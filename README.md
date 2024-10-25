@@ -35,21 +35,26 @@ Welcome to the News Aggregator API! This is a RESTful API built with Laravel tha
    composer install
 
 3.Create a copy of the .env.example file and rename it to .env:
+    ```bash    
     cp .env.example .env
 
 4. Generate the application key:
+    ```bash
     php artisan key:generate
 
-5.Set up your database connection in the .env file.
-6.Run the migrations:
+5.Set up your database connection in the .env file. 
+6.Run the migrations: 
+    ```bash
     php artisan migrate
 
-7.Start the server:
+7.Start the server: 
+    ```bash
     php artisan serve
 
 **API Endpoints
 User Authentication
     Register a new user**
+
     POST /api/register
     - Body: { "name": "user", "email": "user@example.com", "password": "password", "password_confirmation": "password" }
   **Login**    
