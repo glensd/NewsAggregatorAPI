@@ -58,7 +58,7 @@ Welcome to the News Aggregator API! This is a RESTful API built with Laravel tha
     - Body: { "name": "user", "email": "user@example.com", "password": "password", "password_confirmation": "password" }
 
     
-# Login
+### Login
     POST /api/login
     - Body: { "email": "user@example.com", "password": "password" }
 
