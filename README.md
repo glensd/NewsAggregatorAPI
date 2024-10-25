@@ -31,7 +31,8 @@ Welcome to the News Aggregator API! This is a RESTful API built with Laravel tha
    cd news-aggregator
 
 2. Install dependencies:
-    composer install
+    ```bash
+   composer install
 
 3.Create a copy of the .env.example file and rename it to .env:
     cp .env.example .env
