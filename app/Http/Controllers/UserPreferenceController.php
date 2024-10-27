@@ -57,19 +57,19 @@ class UserPreferenceController extends Controller
 
         //get preference based on user id
         $preference = Preference::where('user_id', $userId)->first();
-
+//        $preference = Preference::with('user')->where('user_id', $userId)->first();
         if (!$preference) {
             return ApiResponse(false, 'Preferences not found for the given user.', null, Response::HTTP_NOT_FOUND);
         }
 
-        $preference->sources = json_decode($preference->sources, true);
-        $preference->authors = json_decode($preference->authors, true);
+        $sources = json_decode($preference->sources, true) ?? [];
+        $authors = json_decode($preference->authors, true) ?? [];
         $response = [
             'user_id' => $preference->user->id,
             'user_name' => $preference->user->name,
             'categories' => $preference->category_names,
-            'sources' => $preference->sources,
-            'authors' => $preference->authors,
+            'sources' => $sources,
+            'authors' => $authors,
         ];
         return ApiResponse(
             true,

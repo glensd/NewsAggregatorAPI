@@ -6,12 +6,24 @@ use App\Models\Article;
 use App\Models\Preference;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Validator;
 use Symfony\Component\HttpFoundation\Response;
 
 class ArticlesController extends Controller
 {
     public function index(Request $request)
     {
+        $validator = Validator::make($request->all(), [
+            'keyword' => 'nullable|string|max:255',
+            'source' => 'nullable|string|max:255',
+            'date' => 'nullable|date',
+            'category_id' => 'nullable|exists:categories,id',
+        ]);
+
+        if ($validator->fails()) {
+            return ApiResponse(false, $validator->errors()->first(), $validator->errors()->all(), Response::HTTP_UNPROCESSABLE_ENTITY);
+        }
         $query = Article::with('category');
         //title and content filter
         if ($request->has('keyword')) {
@@ -31,8 +43,10 @@ class ArticlesController extends Controller
         if ($request->has('category_id')) {
             $query->where('category_id', $request->category_id);
         }
-
-        $articles = $query->paginate(10);
+        $cacheKey = 'articles_' . $request->getQueryString();
+        $articles = Cache::remember($cacheKey, 60, function () use ($query) {
+            return $query->paginate(10);
+        });
         return ApiResponse(
             true,
             'Success',

@@ -29,7 +29,7 @@ Route::middleware('auth:sanctum')->group(function () {
     // User Preferences
     Route::post('/preferences', [UserPreferenceController::class, 'setPreferences']);
     Route::get('/preferences/{user_id}', [UserPreferenceController::class, 'getPreferences']);
-    Route::get('/user/{user_id}/personalized-feed', [ArticlesController::class, 'personalizedFeed']);
+    Route::get('/user-personalized-feed/{user_id}', [ArticlesController::class, 'personalizedFeed']);
 
 });
 

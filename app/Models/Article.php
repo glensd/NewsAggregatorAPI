@@ -13,8 +13,10 @@ class Article extends Model
         'title',
         'content',
         'author',
-        'category_id',
         'source',
+        'unique_identifier',
+        'published_at',
+        'category_id'
     ];
     protected $hidden = [
         'updated_at',
