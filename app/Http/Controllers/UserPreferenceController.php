@@ -12,6 +12,31 @@ use Symfony\Component\HttpFoundation\Response;
 
 class UserPreferenceController extends Controller
 {
+    /**
+     * @OA\Post(
+     *     path="/api/preferences",
+     *     summary="Set user preferences",
+     *     security={{"bearerAuth": {}}},
+     *     @OA\RequestBody(
+     *         required=true,
+     *         @OA\JsonContent(
+     *             required={"user_id","categories"},
+     *             @OA\Property(property="user_id", type="integer", description="ID of the user"),
+     *             @OA\Property(property="categories", type="array", @OA\Items(type="integer"), description="Array of category IDs"),
+     *             @OA\Property(property="sources", type="array", @OA\Items(type="string"), description="Array of source names"),
+     *             @OA\Property(property="authors", type="array", @OA\Items(type="string"), description="Array of author names")
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=200,
+     *         description="User preferences set successfully",
+     *      ),
+     *     @OA\Response(
+     *         response=422,
+     *         description="Validation error"
+     *     )
+     * )
+     */
     public function setPreferences(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -47,6 +72,36 @@ class UserPreferenceController extends Controller
         );
     }
 
+    /**
+     * @OA\Get(
+     *     path="/api/preferences/{userId}",
+     *     summary="Get user preferences",
+     *     security={{"bearerAuth": {}}},
+     *     @OA\Parameter(
+     *         name="userId",
+     *         in="path",
+     *         description="ID of the user to get preferences for",
+     *         required=true,
+     *         @OA\Schema(type="integer")
+     *     ),
+     *     @OA\Response(
+     *         response=200,
+     *         description="User preferences retrieved successfully",
+     *         @OA\JsonContent(
+     *             type="object",
+     *             @OA\Property(property="user_id", type="integer", description="User ID"),
+     *             @OA\Property(property="user_name", type="string", description="User Name"),
+     *             @OA\Property(property="categories", type="array", @OA\Items(type="string"), description="List of category names"),
+     *             @OA\Property(property="sources", type="array", @OA\Items(type="string"), description="List of sources"),
+     *             @OA\Property(property="authors", type="array", @OA\Items(type="string"), description="List of authors")
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=404,
+     *         description="User or preferences not found"
+     *     )
+     * )
+     */
     public function getPreferences($userId)
     {
         //get user
