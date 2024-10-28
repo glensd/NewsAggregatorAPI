@@ -117,7 +117,9 @@ Comprehensive API documentation is available using Swagger/OpenAPI. To access it
 php artisan swagger-lume:generate
 ```
 Then navigate to http://localhost:8000/api/documentation.
-
+You can view the API documentation by downloading and opening the `index.html` file locally:
+- [Download `index.html`](./docs/index.html)
+- 
 ## License
 This project is licensed under the MIT License.
 
