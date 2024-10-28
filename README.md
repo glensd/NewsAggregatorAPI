@@ -1,21 +1,24 @@
 # News Aggregator API
 
-Welcome to the News Aggregator API! This is a RESTful API built with Laravel that allows users to manage articles, authenticate, and customize their news preferences.
+## Overview
+The News Aggregator API is a backend service built with Laravel that allows users to access news articles from various sources, personalized according to their preferences. This API fetches articles from multiple news APIs, including NewsAPI, The Guardian, and The New York Times.
 
 ## Table of Contents
 - [Features](#features)
 - [Requirements](#requirements)
+- [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [API Endpoints](#api-endpoints)
-- [Usage](#usage)
+- [Commands Scheduled](#commands-scheduled)
+- [API Documentation](#api-documentation)
 - [Testing](#testing)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Features
-- User Authentication using Laravel Sanctum (registration, login, logout, password reset)
-- Article Management (fetch, search, and retrieve articles)
-- User Preferences (to be implemented in subsequent steps)
+- User authentication (registration, login, logout, password reset)
+- Article management (fetch, store, update, and retrieve articles)
+- User preferences management (set and retrieve preferred news sources, categories, and authors)
+- Personalized news feed based on user preferences
 
 ## Requirements
 - PHP 8.0 or higher
@@ -23,61 +26,101 @@ Welcome to the News Aggregator API! This is a RESTful API built with Laravel tha
 - Laravel 8 or higher
 - MySQL or any compatible database
 
-## Installation
+## Technologies Used
+- Laravel 10
+- MySQL
+- HTTP Client (for API requests)
+- Caching (for optimized performance)
+- Swagger/OpenAPI (for API documentation)
 
+## Installation
 1. Clone the repository:
    ```bash
    git clone <repository-url>
-   cd news-aggregator
-
-2. Install dependencies:
+   ```
+   
+2. Navigate into the project directory:
     ```bash
-   composer install
-
-3.Create a copy of the .env.example file and rename it to .env:
-    ```bash    
+   cd <project-directory>
+   ```
+   
+3. Install dependencies:
+    ```bash
+    composer install
+    ```
+   
+4. Set up your .env file:
+    ```bash
     cp .env.example .env
-
-4. Generate the application key:
+    ```
+   
+5. Generate an application key:
     ```bash
     php artisan key:generate
-
-5.Set up your database connection in the .env file and Run the migrations: 
-    ```bash
+    ```
+   
+6. Run migrations to set up the database:
+    ``` bash 
     php artisan migrate
-    
-6.Start the server: 
+    ```
+7. Seed the database :
+    ```bash
+    php artisan db:seed
+    ```
+   
+8. Start the local development server:
     ```bash
     php artisan serve
+    ```
 
 # API Endpoints
-## User Authentication
+## Authentication
 
-### Register a new user
-    POST /api/register
-    - Body: { "name": "user", "email": "user@example.com", "password": "password", "password_confirmation": "password" }
+### User registration
+- POST /api/register
 
-    
-### Login
-    POST /api/login
-    - Body: { "email": "user@example.com", "password": "password" }
+### User login
+- POST /api/login
 
-### Logout
-    POST /api/logout
+### User logout
+- POST /api/logout
     
 ### Reset Password
-    POST /api/reset-password
-    - Body: { "email": "user@example.com", "new_password": "newPassword123" }
+- POST /api/reset-password
 
 ## Article Management
-### Fetch all articles
-    GET - /api/articles
-    
-### Search articles
-    GET - /api/articles/search?keyword=someKeyword
-    
-### Retrieve a single article
-    GET - /api/articles/{id}
+### Retrieve articles with filters (title, content, source, date, category)
+- GET /api/articles
 
-## Usage
-After setting up the API and starting the server, you can use tools like Postman or cURL to interact with the API endpoints.
+###  Retrieve a specific article
+-   GET /api/articles/{id}
+
+### Retrieve personalized news feed based on user preferences
+- GET /api/user-personalized-feed/{user_id}
+
+## User Preferences
+### Set user preferences (news sources, categories, authors)
+-  POST /api/preferences
+
+### Retrieve user preferences
+- GET /api/preferences/{userId}
+
+## Fetching Articles
+To regularly fetch and store articles from news APIs, run the following command:
+``` bash
+php artisan articles:fetch
+```
+
+## API Documentation
+Comprehensive API documentation is available using Swagger/OpenAPI. To access it, run the following command:
+``` bash
+php artisan swagger-lume:generate
+```
+Then navigate to http://localhost:8000/api/documentation.
+
+## License
+This project is licensed under the MIT License.
+
+
+
+
