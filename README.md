@@ -114,11 +114,11 @@ php artisan articles:fetch
 ## API Documentation
 Comprehensive API documentation is available using Swagger/OpenAPI. To access it, run the following command:
 ``` bash
-php artisan swagger-lume:generate
+php artisan l5-swagger:generate
 ```
 Then navigate to http://localhost:8000/api/documentation.
 You can view the API documentation by downloading and opening the `index.html` file locally:
-- [Download `index.html`](./docs/index.html)
+- https://glensd.github.io/newsaggregator-api/
 - 
 ## License
 This project is licensed under the MIT License.
