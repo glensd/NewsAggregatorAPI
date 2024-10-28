@@ -108,7 +108,7 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'email' => 'required|email|exists:users,email',
+            'email' => 'required|email',
             'password' => 'required',
         ]);
 
@@ -117,6 +117,10 @@ class AuthController extends Controller
         }
 
         $user = User::where('email', $request->email)->first();
+
+        if (!$user) {
+            return ApiResponse(false, 'The selected email is invalid.', null, Response::HTTP_UNPROCESSABLE_ENTITY);
+        }
 
         if ($user->logout_time === null) {
             return ApiResponse(false, 'User Already Logged-in', null, Response::HTTP_NOT_ACCEPTABLE);
@@ -166,7 +170,7 @@ class AuthController extends Controller
         $user->update(['logout_time' => now()]);
         $user->tokens()->delete();
 
-        return ApiResponse(true, 'Access Token Deleted', null, Response::HTTP_ACCEPTED);
+        return ApiResponse(true, 'Access Token Deleted', null, Response::HTTP_OK);
     }
 
     /**
