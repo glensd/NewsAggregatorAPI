@@ -253,12 +253,12 @@ Below is a summary of the API test cases and their status:
 * Test case: Successfully retrieves articles filtered by category
 * Status: Passed ✅
 
-### User Preferences
+
 ####   User Personalized Feed (/api/user-personalized-feed/)
 * Test case: Successfully retrieves personalized news feeds based on user preferences
 * Status: Passed ✅
 
-User Preferences
+### User Preferences
 ####   Store User Preferences (/api/preferences)
 * Test case: Successfully saves user preferences for personalized news feeds
 * Status: Passed ✅
