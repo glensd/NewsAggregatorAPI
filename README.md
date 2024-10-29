@@ -19,11 +19,19 @@ The News Aggregator API is a backend service built with Laravel that allows user
 <div>
 <img width="150" alt="Screenshot 2024-10-29 at 3 57 54 PM" src="https://github.com/user-attachments/assets/94bfd102-cc83-4c96-8ce9-d651de03e571">
 <img width="150" alt="Screenshot 2024-10-29 at 3 58 03 PM" src="https://github.com/user-attachments/assets/36fa8a68-d508-4e98-9c62-113e5d506925">
-regitser api screenshots
 <img width="150" alt="Screenshot 2024-10-29 at 3 58 41 PM" src="https://github.com/user-attachments/assets/bba99ac3-ec33-4461-bf42-0b805b6ac73f">
 <img width="150" alt="Screenshot 2024-10-29 at 3 59 56 PM" src="https://github.com/user-attachments/assets/f592ca50-fdd6-4c9e-b6f3-4e7b78a4752f">
 <img width="150" alt="Screenshot 2024-10-29 at 4 00 20 PM" src="https://github.com/user-attachments/assets/3b69496d-c2cf-4493-b878-35d26c8e6c26">
 <img width="150" alt="Screenshot 2024-10-29 at 4 00 35 PM" src="https://github.com/user-attachments/assets/c2063d2c-dcca-42f5-b32b-ca1774c5a208">
+<img width="150" alt="Screenshot 2024-10-29 at 4 04 53 PM" src="https://github.com/user-attachments/assets/925651d7-e638-47b8-82ed-742d5e380f32">
+<img width="150" alt="Screenshot 2024-10-29 at 4 05 10 PM" src="https://github.com/user-attachments/assets/c7f8f291-6e6a-420c-859e-c04b44f99b7c">
+<img width="150" alt="Screenshot 2024-10-29 at 4 06 10 PM" src="https://github.com/user-attachments/assets/a95a2cc6-8ccb-4945-9294-d623d0417adc">
+<img width="150" alt="Screenshot 2024-10-29 at 4 12 40 PM" src="https://github.com/user-attachments/assets/c449d19f-5993-4c81-a695-63571e8333ab">
+<img width="150" alt="Screenshot 2024-10-29 at 4 12 50 PM" src="https://github.com/user-attachments/assets/03dfc3d0-b84c-4bba-b330-3710646883e8">
+<img width="150" alt="Screenshot 2024-10-29 at 4 10 15 PM" src="https://github.com/user-attachments/assets/ea4b49a6-dfa1-4b70-97da-88354a34b937">
+<img width="150" alt="Screenshot 2024-10-29 at 4 10 31 PM" src="https://github.com/user-attachments/assets/dc68af59-c214-4121-9f79-7c6a5555894f">
+<img width="150" alt="Screenshot 2024-10-29 at 4 10 54 PM" src="https://github.com/user-attachments/assets/ef0e38d3-f5fa-4a55-b424-10a478aa8a4c">
+<img width="150" alt="Screenshot 2024-10-29 at 4 11 08 PM" src="https://github.com/user-attachments/assets/acfa4ee9-835a-4dc3-b16b-0073ebb27e61">
 
 </div>
   
