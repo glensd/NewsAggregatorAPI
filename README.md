@@ -34,6 +34,8 @@ The News Aggregator API is a backend service built with Laravel that allows user
 <img width="150" alt="Screenshot 2024-10-29 at 4 11 08 PM" src="https://github.com/user-attachments/assets/acfa4ee9-835a-4dc3-b16b-0073ebb27e61">
 <img width="150" alt="Screenshot 2024-10-29 at 4 14 49 PM" src="https://github.com/user-attachments/assets/15bc5154-d103-4dd1-a5dd-33a950cbbf2a">
 <img width="150" alt="Screenshot 2024-10-29 at 4 15 05 PM" src="https://github.com/user-attachments/assets/da8db125-dadc-4e9c-94ba-84f4a0075bc1">
+<img width="150" alt="Screenshot 2024-10-29 at 4 16 47 PM" src="https://github.com/user-attachments/assets/c80afc9d-b087-44b4-b5b2-dc93379ba430">
+<img width="150" alt="Screenshot 2024-10-29 at 4 17 06 PM" src="https://github.com/user-attachments/assets/db39db4f-9c87-4f8f-af80-cb2247e31a75">
 
 </div>
   
