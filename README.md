@@ -1,8 +1,7 @@
 # News Aggregator API
 
 ## Overview
-The News Aggregator API is a backend service built with Laravel that allows users to access news articles from various sources, personalized according to their pr<img width="1350" alt="Screenshot 2024-10-29 at 10 20 10 AM" src="https://github.com/user-attachments/assets/4f74f072-0597-4728-bcb9-d2a552df858f">
-eferences. This API fetches articles from multiple news APIs, including NewsAPI, The Guardian, and The New York Times.
+The News Aggregator API is a backend service built with Laravel that allows users to access news articles from various sources, personalized according to their preferences. This API fetches articles from multiple news APIs, including NewsAPI, The Guardian, and The New York Times.
 
 ## Table of Contents
 - [Features](#features)
@@ -21,6 +20,7 @@ eferences. This API fetches articles from multiple news APIs, including NewsAPI,
 <img width="200" alt="Screenshot 2024-10-29 at 1 10 29 PM" src="https://github.com/user-attachments/assets/f27bde6c-72c4-41a4-9aa9-6073b4f5c4b8">
 <img width="200" alt="Screenshot 2024-10-29 at 1 10 51 PM" src="https://github.com/user-attachments/assets/3d5f9d56-b1ea-4d9e-9249-c24da371b158">
 <img width="200" alt="Screenshot 2024-10-29 at 1 11 37 PM" src="https://github.com/user-attachments/assets/f6e1652b-8d78-48c1-beaf-47f56574ea77">
+<img width="200" alt="Screenshot 2024-10-29 at 1 12 05 PM" src="https://github.com/user-attachments/assets/a04bc3e9-9f92-4d0c-9c54-2ff1e051029e">
 
 ## Features
 - User authentication (registration, login, logout, password reset)
