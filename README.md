@@ -17,8 +17,8 @@ The News Aggregator API is a backend service built with Laravel that allows user
 ## Screenshots
 ### Swagger Documentation Screenshots
 <div style="display: flex; flex-wrap: wrap; gap: 20px;">
-    <img alt="Screenshot 2024-10-29 at 1 13 09 PM" src="https://github.com/user-attachments/assets/9d94b3f2-f76c-4991-bf90-4618f25cd7d8" width="20%" style="border: 2px solid #ddd; border-radius: 10px; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); margin-bottom: 20px;">
-    <img alt="Screenshot 2024-10-29 at 1 10 29 PM" src="https://github.com/user-attachments/assets/f27bde6c-72c4-41a4-9aa9-6073b4f5c4b8" width="20%" style="border: 2px solid #ddd; border-radius: 10px; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); margin-bottom: 20px;">
+    <img alt="Screenshot 2024-10-29 at 1 13 09 PM" src="https://github.com/user-attachments/assets/9d94b3f2-f76c-4991-bf90-4618f25cd7d8" width="20%">
+    <img alt="Screenshot 2024-10-29 at 1 10 29 PM" src="https://github.com/user-attachments/assets/f27bde6c-72c4-41a4-9aa9-6073b4f5c4b8" width="20%" >
     <img alt="Screenshot 2024-10-29 at 1 10 51 PM" src="https://github.com/user-attachments/assets/3d5f9d56-b1ea-4d9e-9249-c24da371b158" width="20%" style="border: 2px solid #ddd; border-radius: 10px; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); margin-bottom: 20px;">
     <img alt="Screenshot 2024-10-29 at 1 11 37 PM" src="https://github.com/user-attachments/assets/f6e1652b-8d78-48c1-beaf-47f56574ea77" width="20%" style="border: 2px solid #ddd; border-radius: 10px; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); margin-bottom: 20px;">
     <img alt="Screenshot 2024-10-29 at 1 12 05 PM" src="https://github.com/user-attachments/assets/a04bc3e9-9f92-4d0c-9c54-2ff1e051029e" width="20%" style="border: 2px solid #ddd; border-radius: 10px; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); margin-bottom: 20px;">
