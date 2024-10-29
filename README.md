@@ -143,8 +143,6 @@ This command fetches articles from multiple news sources, including
 
 It retrieves relevant articles and stores them in the database for your application.
 
-Make sure to configure your API keys properly in your application to enable this command to function correctly.
-
 ## API Endpoints
 ### Authentication
 
