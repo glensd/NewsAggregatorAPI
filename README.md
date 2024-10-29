@@ -220,6 +220,7 @@ To run individual test cases, use the --filter option with the specific test cas
 
 ### Below are the screenshots of test cases run
 <img width="1350" alt="Screenshot 2024-10-29 at 10 20 10 AM" src="https://github.com/user-attachments/assets/4643caef-960e-4284-a87f-86c8c1c8de51">
+<img width="1321" alt="Screenshot 2024-10-29 at 10 21 29 AM" src="https://github.com/user-attachments/assets/3ff0e26e-bfd0-49f3-aa7c-f2d9f9e3a3f8">
 
 ## License
 This project is licensed under the MIT License.
