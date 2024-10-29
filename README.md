@@ -131,6 +131,20 @@ Use the following credentials to connect to the MySQL database:
 -   DB_USERNAME: newsAggreagtor
 -   DB_PASSWORD: newsAggreagtor@123
 
+## Fetching Articles
+To regularly fetch and store articles from news APIs, run the following command:
+``` bash
+php artisan articles:fetch
+```
+This command fetches articles from multiple news sources, including
+-   NewsAPI
+- The Guardian
+- The New York Times
+
+It retrieves relevant articles and stores them in the database for your application.
+
+Make sure to configure your API keys properly in your application to enable this command to function correctly.
+
 ## API Endpoints
 ### Authentication
 
@@ -163,19 +177,7 @@ Use the following credentials to connect to the MySQL database:
 #### Retrieve user preferences
 - GET /api/preferences/{userId}
 
-## Fetching Articles
-To regularly fetch and store articles from news APIs, run the following command:
-``` bash
-php artisan articles:fetch
-```
-This command fetches articles from multiple news sources, including 
--   NewsAPI
-- The Guardian
-- The New York Times
 
-It retrieves relevant articles and stores them in the database for your application.
-
-Make sure to configure your API keys properly in your application to enable this command to function correctly.
 ## API Documentation
 Comprehensive API documentation is available using Swagger/OpenAPI. To access it, run the following command:
 ``` bash
@@ -183,7 +185,7 @@ php artisan l5-swagger:generate
 ```
 After running the command, navigate to the following URL to access the Swagger API documentation:
 
-http://localhost:8000/api/documentation
+-   http://localhost:8000/api/documentation
 
 ### You can also view the custom API documentation by clicking on the link below:
 - [Custom API Documentation](https://glensd.github.io/newsaggregator-api/)
@@ -272,13 +274,13 @@ Fetch Articles Command
 ## Running Test Cases
 To run all test cases at once, use the following command:
 ```bash
- php artisan test
+  php artisan test
 ```
 
 To run individual test cases, use the --filter option with the specific test case name. Here are a few examples:
 ```bash
-    php artisan test --filter test_successful_registration
-    php artisan test --filter test_successful_login
+  php artisan test --filter test_successful_registration
+  php artisan test --filter test_successful_login
 ```
 
 ### Screenshots of Test Cases Run
