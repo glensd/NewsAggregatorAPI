@@ -156,6 +156,7 @@ It retrieves relevant articles and stores them in the database for your applicat
 - POST /api/logout
     
 #### Reset Password
+- POST /api/forgot-password
 - POST /api/reset-password
 
 ### Article Management
@@ -189,7 +190,9 @@ After running the command, navigate to the following URL to access the Swagger A
 
 - [Custom API Documentation](https://glensd.github.io/newsaggregator-api/)
 
-
+## Email Testing
+For testing email functionality, including the forgot password feature, the application uses **Mailtrap**.
+Ensure your Mailtrap credentials are set in the .env file.
 
 ## Testing
 ### Summary of Test Cases
