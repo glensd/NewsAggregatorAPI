@@ -190,11 +190,12 @@ After running the command, navigate to the following URL to access the Swagger A
 
 ### You can also view the custom API documentation by clicking on the link below:
 
-- [Custom API Documentation](https://glensd.github.io/newsaggregator-api/)
+- **[Custom API Documentation](https://glensd.github.io/newsaggregator-api/)**
+
 
 
 ## Swagger Documentation Screenshot
-#### Below is a sample screenshot of the Swagger documentation interface, illustrating the API endpoints and request/response structures. Note that only a few representative screenshots are attached; full documentation is available through Swagger.
+Below is a sample screenshot of the Swagger documentation interface, illustrating the API endpoints and request/response structures. Note that only a few representative screenshots are attached; full documentation is available through Swagger.
 <div>
 <img width="150" alt="Screenshot 2024-10-29 at 3 57 54 PM" src="https://github.com/user-attachments/assets/94bfd102-cc83-4c96-8ce9-d651de03e571">
 <img width="150" alt="Screenshot 2024-10-29 at 3 58 03 PM" src="https://github.com/user-attachments/assets/36fa8a68-d508-4e98-9c62-113e5d506925">
