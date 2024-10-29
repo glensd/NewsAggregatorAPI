@@ -22,12 +22,12 @@ Route::post('/logout', [AuthController::class, 'logout']);
 //reset password
 Route::post('/forgot-password', [AuthController::class, 'forgotPassword'])->name('password.email');
 Route::post('/reset-password', [AuthController::class, 'resetPassword'])->name('password.reset');
-
-Route::middleware('auth:sanctum')->group(function () {
+//get category
+Route::get('/categories', [ArticlesController::class, 'getCategory']);
+//rate limiter is added in routes directly 60 request per minute
+Route::middleware(['auth:sanctum', 'throttle:60,1'])->group(function () {
     //articles
     Route::apiResource('articles', ArticlesController::class)->only(['index', 'show']);
-    //get category
-    Route::get('/categories', [ArticlesController::class, 'getCategory']);
     // User Preferences
     Route::post('/preferences', [UserPreferenceController::class, 'setPreferences']);
     Route::get('/preferences/{user_id}', [UserPreferenceController::class, 'getPreferences']);
