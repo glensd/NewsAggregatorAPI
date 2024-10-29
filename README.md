@@ -1,4 +1,4 @@
-# News Aggregator API
+<img width="1350" alt="Screenshot 2024-10-29 at 10 20 10 AM" src="https://github.com/user-attachments/assets/44e8be24-f89e-4927-afc3-d80dd5da480f"># News Aggregator API
 
 ## Overview
 The News Aggregator API is a backend service built with Laravel that allows users to access news articles from various sources, personalized according to their preferences. This API fetches articles from multiple news APIs, including NewsAPI, The Guardian, and The New York Times.
@@ -219,8 +219,8 @@ To run individual test cases, use the --filter option with the specific test cas
 ```
 
 ### Below are the screenshots of test cases run
-![img.png](img.png)
-![img_1.png](img_1.png)
+<img width="1350" alt="Screenshot 2024-10-29 at 10 20 10 AM" src="https://github.com/user-attachments/assets/4643caef-960e-4284-a87f-86c8c1c8de51">
+
 ## License
 This project is licensed under the MIT License.
 
