@@ -26,6 +26,10 @@ The News Aggregator API is a backend service built with Laravel that allows user
 <img width="150" alt="Screenshot 2024-10-29 at 4 04 53 PM" src="https://github.com/user-attachments/assets/925651d7-e638-47b8-82ed-742d5e380f32">
 <img width="150" alt="Screenshot 2024-10-29 at 4 05 10 PM" src="https://github.com/user-attachments/assets/c7f8f291-6e6a-420c-859e-c04b44f99b7c">
 <img width="150" alt="Screenshot 2024-10-29 at 4 06 10 PM" src="https://github.com/user-attachments/assets/a95a2cc6-8ccb-4945-9294-d623d0417adc">
+<img width="150" alt="Screenshot 2024-10-29 at 4 20 37 PM" src="https://github.com/user-attachments/assets/f9b5aafe-a917-41b0-8ae1-4a779160e084">
+<img width="150" alt="Screenshot 2024-10-29 at 4 20 52 PM" src="https://github.com/user-attachments/assets/9023f283-377e-4cc1-a78a-95c3e0a4e305">
+<img width="150" alt="Screenshot 2024-10-29 at 4 21 17 PM" src="https://github.com/user-attachments/assets/f16eeb2a-9b7e-4472-8758-60f75c932f09">
+<img width="150" alt="Screenshot 2024-10-29 at 4 23 06 PM" src="https://github.com/user-attachments/assets/4914957b-4053-42dd-9473-d47fc8b54519">
 <img width="150" alt="Screenshot 2024-10-29 at 4 12 40 PM" src="https://github.com/user-attachments/assets/c449d19f-5993-4c81-a695-63571e8333ab">
 <img width="150" alt="Screenshot 2024-10-29 at 4 12 50 PM" src="https://github.com/user-attachments/assets/03dfc3d0-b84c-4bba-b330-3710646883e8">
 <img width="150" alt="Screenshot 2024-10-29 at 4 10 15 PM" src="https://github.com/user-attachments/assets/ea4b49a6-dfa1-4b70-97da-88354a34b937">
