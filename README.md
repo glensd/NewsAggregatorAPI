@@ -16,8 +16,11 @@ eferences. This API fetches articles from multiple news APIs, including NewsAPI,
 - [License](#license)
 
 ## Screenshots
-<img width="300" alt="Screenshot 2024-10-29 at 1 02 57 PM" src="https://github.com/user-attachments/assets/71ff3e7d-b676-44df-b8e9-38038f6ba213">
-<img width="400" alt="Screenshot 2024-10-29 at 10 20 10 AM" src="https://github.com/user-attachments/assets/47cf40cd-a7fb-4988-8c2e-643d65cc6da7">
+
+<img width="200" alt="Screenshot 2024-10-29 at 1 13 09 PM" src="https://github.com/user-attachments/assets/9d94b3f2-f76c-4991-bf90-4618f25cd7d8">
+<img width="200" alt="Screenshot 2024-10-29 at 1 10 29 PM" src="https://github.com/user-attachments/assets/f27bde6c-72c4-41a4-9aa9-6073b4f5c4b8">
+<img width="200" alt="Screenshot 2024-10-29 at 1 10 51 PM" src="https://github.com/user-attachments/assets/3d5f9d56-b1ea-4d9e-9249-c24da371b158">
+<img width="200" alt="Screenshot 2024-10-29 at 1 11 37 PM" src="https://github.com/user-attachments/assets/f6e1652b-8d78-48c1-beaf-47f56574ea77">
 
 ## Features
 - User authentication (registration, login, logout, password reset)
