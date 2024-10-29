@@ -186,11 +186,11 @@ php artisan l5-swagger:generate
 ```
 After running the command, navigate to the following URL to access the Swagger API documentation:
 
-http://localhost:8000/api/documentation
+-    http://localhost:8000/api/documentation
 
 ### You can also view the custom API documentation by clicking on the link below:
 
- **[Custom API Documentation](https://glensd.github.io/newsaggregator-api/)**
+-    **[Custom API Documentation](https://glensd.github.io/newsaggregator-api/)**
 
 
 
