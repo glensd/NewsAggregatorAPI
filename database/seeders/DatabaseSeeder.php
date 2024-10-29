@@ -15,14 +15,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $categories = Category::factory(10)->create();
-        Article::factory(50)->create();
-        Preference::factory(10)->create();
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        //commenting factory as I have used seeder and rest data is coming from news apis if u want u can uncomment it
+//        $categories = Category::factory(10)->create();
+//        Article::factory(50)->create();
+//        Preference::factory(10)->create();
+        $this->call([
+            CategoriesTableSeeder::class,
+        ]);
     }
 }

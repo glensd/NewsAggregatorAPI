@@ -116,8 +116,8 @@ Comprehensive API documentation is available using Swagger/OpenAPI. To access it
 ``` bash
 php artisan l5-swagger:generate
 ```
-Then navigate to http://localhost:8000/api/documentation.
-You can view the API documentation by downloading and opening the `index.html` file locally:
+Then navigate to http://localhost:8000/api/documentation. You can view the API documentation by downloading and opening the index.html file locally:
+API Documentation
 - https://glensd.github.io/newsaggregator-api/
 
 ## Testing
