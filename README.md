@@ -5,11 +5,11 @@ The News Aggregator API is a backend service built with Laravel that allows user
 
 ## Table of Contents
 - [Features](#features)
-- [Requirements](#requirements)
 - [Technologies Used](#technologies-used)
+- [Requirements](#requirements)
 - [Installation](#installation)
+- [Docker](#docker)
 - [API Endpoints](#api-endpoints)
-- [Commands Scheduled](#commands-scheduled)
 - [API Documentation](#api-documentation)
 - [Testing](#testing)
 - [License](#license)
@@ -19,12 +19,7 @@ The News Aggregator API is a backend service built with Laravel that allows user
 - Article management (fetch, store, update, and retrieve articles)
 - User preferences management (set and retrieve preferred news sources, categories, and authors)
 - Personalized news feed based on user preferences
-
-## Requirements
-- PHP 8.0 or higher
-- Composer
-- Laravel 8 or higher
-- MySQL or any compatible database
+- Get hourly news from NewsAPI, The Guardian, and The New York Times using command.
 
 ## Technologies Used
 - Laravel 10
@@ -32,6 +27,12 @@ The News Aggregator API is a backend service built with Laravel that allows user
 - HTTP Client (for API requests)
 - Caching (for optimized performance)
 - Swagger/OpenAPI (for API documentation)
+
+## Requirements
+- PHP 8.0 or higher
+- Composer
+- Laravel 8 or higher
+- MySQL or any compatible database
 
 ## Installation
 1. Clone the repository:
@@ -73,36 +74,93 @@ The News Aggregator API is a backend service built with Laravel that allows user
     php artisan serve
     ```
 
-# API Endpoints
-## Authentication
+## Docker
+This project can also be run using Docker. Follow these instructions:
 
-### User registration
+-   Make sure Docker is installed and running on your machine.
+-   Create a docker-compose.yml file in the root of the project with the following content:
+
+```bash
+    version: '3.8'
+
+    services:
+        app:
+            image: php:8.1-fpm
+            container_name: newsaggregator_app
+            restart: unless-stopped
+            working_dir: /var/www/html
+            volumes:
+                - ./:/var/www/html
+            depends_on:
+                - db
+            command: php -S 0.0.0.0:8000 -t public
+    
+        db:
+            image: mysql:latest
+            container_name: newsaggregator_db
+            restart: unless-stopped
+            environment:
+                MYSQL_ROOT_PASSWORD: root
+                MYSQL_DATABASE: news_aggregator_api
+                MYSQL_USER: newsAggreagtor
+                MYSQL_PASSWORD: newsAggreagtor@123
+            volumes:
+                - db_data:/var/lib/mysql
+    
+    volumes:
+        db_data:
+    
+    networks:
+        newsaggregator_network:
+            driver: bridge
+```
+
+-   Build and start the containers:
+```bash
+  docker-compose up -d 
+```
+-   Access the application at http://localhost:8000
+
+### Database Credentials
+Use the following credentials to connect to the MySQL database:
+
+-   DB_CONNECTION: mysql
+-   DB_HOST: db (Docker service name)
+-   DB_PORT: 3306
+-   DB_DATABASE: news_aggregator_api
+-   DB_USERNAME: newsAggreagtor
+-   DB_PASSWORD: newsAggreagtor@123
+
+## API Endpoints
+### Authentication
+
+#### User registration
 - POST /api/register
 
-### User login
+#### User login
 - POST /api/login
 
-### User logout
+#### User logout
 - POST /api/logout
     
-### Reset Password
+#### Reset Password
 - POST /api/reset-password
 
-## Article Management
-### Retrieve articles with filters (title, content, source, date, category)
+### Article Management
+#### Retrieve articles with filters (title, content, source, date, category)
 - GET /api/articles
 
-###  Retrieve a specific article
+####  Retrieve a specific article
 -   GET /api/articles/{id}
 
-### Retrieve personalized news feed based on user preferences
+#### Retrieve personalized news feed based on user preferences
 - GET /api/user-personalized-feed/{user_id}
 
-## User Preferences
-### Set user preferences (news sources, categories, authors)
+### User Preferences
+#### Set user preferences (news sources, categories, authors)
 -  POST /api/preferences
 
-### Retrieve user preferences
+#### Retrieve user preferences
 - GET /api/preferences/{userId}
 
 ## Fetching Articles
@@ -110,24 +168,36 @@ To regularly fetch and store articles from news APIs, run the following command:
 ``` bash
 php artisan articles:fetch
 ```
+This command fetches articles from multiple news sources, including 
+-   NewsAPI
+- The Guardian
+- The New York Times
 
+It retrieves relevant articles and stores them in the database for your application.
+
+Make sure to configure your API keys properly in your application to enable this command to function correctly.
 ## API Documentation
 Comprehensive API documentation is available using Swagger/OpenAPI. To access it, run the following command:
 ``` bash
 php artisan l5-swagger:generate
 ```
-Then navigate to http://localhost:8000/api/documentation. You can view the API documentation by downloading and opening the index.html file locally:
-API Documentation
-- https://glensd.github.io/newsaggregator-api/
+After running the command, navigate to the following URL to access the Swagger API documentation:
+
+http://localhost:8000/api/documentation
+
+### You can also view the custom API documentation by clicking on the link below:
+- [Custom API Documentation](https://glensd.github.io/newsaggregator-api/)
+
+
 
 ## Testing
+### Summary of Test Cases
 Below is a summary of the API test cases and their status:
-- Registration (/api/register)
+####    Registration (/api/register)
   - Test case: Successful user registration
   - Status: Passed ✅
 
-
-- Login (/api/login)
+#### Login (/api/login)
   - Test case: Successful login with valid credentials
   - Status: Passed ✅
   - Test case: Attempt to login with non-existent email
@@ -137,88 +207,81 @@ Below is a summary of the API test cases and their status:
   - Test case: Attempt to login without password
   - Status: Passed ✅
 
-
-- Forgot Password (/api/forgot-password)
-    - Test case: Email exists, reset link sent
-    - Status: Passed ✅ 
-    - Test case: Email does not exist, validation error
-    - Status: Passed ✅
-  
-
-- Reset Password (/api/reset-password)
-
-    - Test case: Valid token and new password provided
-    - Status: Passed ✅
-    - Test case: Invalid token, unable to reset password
-    - Status: Passed ✅
+#### Forgot Password (/api/forgot-password)
+- Test case: Email exists, reset link sent
+- Status: Passed ✅ 
+- Test case: Email does not exist, validation error
+- Status: Passed ✅
 
 
--   Logout (/api/logout)
-    - Test case: Successful logout with email provided
-    - Status: Passed ✅ 
-    - Test case: Attempt to logout with invalid email
-    - Status: Passed ✅
+#### Reset Password (/api/reset-password)
 
-Categories API
-* Get Categories (/api/categories)
-    * Test case: Successfully retrieves categories
-    * Status: Passed ✅
-
-Articles API
-* Show Article (/api/articles/{id})
-    * Test case: Successfully retrieves an article by ID
-    * Status: Passed ✅
-  
-
-* Index Articles (/api/articles)
-    * Test case: Fetch all articles, with optional filtering by category and author.
-    * Status: Passed ✅
+- Test case: Valid token and new password provided
+- Status: Passed ✅
+- Test case: Invalid token, unable to reset password
+- Status: Passed ✅
 
 
-* Index Articles with Keyword Filter
-    * Test case: Successfully retrieves articles filtered by keyword
-    * Status: Passed ✅
+####  Logout (/api/logout)
+- Test case: Successful logout with email provided
+- Status: Passed ✅ 
+- Test case: Attempt to logout with invalid email
+- Status: Passed ✅
 
+###  Categories API
+####    Get Categories (/api/categories)
+* Test case: Successfully retrieves categories
+* Status: Passed ✅
 
-* Index Articles with Category Filter
-    * Test case: Successfully retrieves articles filtered by category
-    * Status: Passed ✅
+###  Articles API
+####   Show Article (/api/articles/{id})
+* Test case: Successfully retrieves an article by ID
+* Status: Passed ✅
 
+####  Index Articles (/api/articles)
+* Test case: Fetch all articles, with optional filtering by category and author.
+* Status: Passed ✅
 
-* User Personalized Feed (/api/user-personalized-feed/)
-  * Test case: Successfully retrieves personalized news feeds based on user preferences
-  * Status: Passed ✅
+####   Index Articles with Keyword Filter
+* Test case: Successfully retrieves articles filtered by keyword
+* Status: Passed ✅
 
+####   Index Articles with Category Filter
+* Test case: Successfully retrieves articles filtered by category
+* Status: Passed ✅
 
-* Store User Preferences (/api/preferences)
-  * Test case: Successfully saves user preferences for personalized news feeds
-  * Status: Passed ✅
+### User Preferences
+####   User Personalized Feed (/api/user-personalized-feed/)
+* Test case: Successfully retrieves personalized news feeds based on user preferences
+* Status: Passed ✅
 
- 
-* Get User Preferences (/api/preferences)
-  * Test case: Successfully retrieves user preferences
-  * Status: Passed ✅
+User Preferences
+####   Store User Preferences (/api/preferences)
+* Test case: Successfully saves user preferences for personalized news feeds
+* Status: Passed ✅
+
+####   Get User Preferences (/api/preferences)
+* Test case: Successfully retrieves user preferences
+* Status: Passed ✅
 
 
 Fetch Articles Command
 * Test case: Successfully fetches articles from various news sources and stores them in the database
 * Status: Passed ✅
+
 ## Running Test Cases
 To run all test cases at once, use the following command:
 ```bash
  php artisan test
 ```
 
-To run individual test cases, use the --filter option with the specific test case name. Here are a few examples of a running test case individually:
+To run individual test cases, use the --filter option with the specific test case name. Here are a few examples:
 ```bash
     php artisan test --filter test_successful_registration
-```
-
-```bash
     php artisan test --filter test_successful_login
 ```
 
-### Below are the screenshots of test cases run
+### Screenshots of Test Cases Run
 <img width="1350" alt="Screenshot 2024-10-29 at 10 20 10 AM" src="https://github.com/user-attachments/assets/4643caef-960e-4284-a87f-86c8c1c8de51">
 <img width="1321" alt="Screenshot 2024-10-29 at 10 21 29 AM" src="https://github.com/user-attachments/assets/3ff0e26e-bfd0-49f3-aa7c-f2d9f9e3a3f8">
 
