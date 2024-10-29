@@ -11,6 +11,8 @@ The News Aggregator API is a backend service built with Laravel that allows user
 - [Docker](#docker)
 - [API Endpoints](#api-endpoints)
 - [API Documentation](#api-documentation)
+- [Swagger Screenshot](#swagger-screenshot)
+- [Email Testing](#email-testing) 
 - [Testing](#testing)
 - [License](#license)
 
@@ -156,6 +158,7 @@ It retrieves relevant articles and stores them in the database for your applicat
 - POST /api/logout
     
 #### Reset Password
+- POST /api/forgot-password
 - POST /api/reset-password
 
 ### Article Management
@@ -183,13 +186,50 @@ php artisan l5-swagger:generate
 ```
 After running the command, navigate to the following URL to access the Swagger API documentation:
 
--   http://localhost:8000/api/documentation
+-    http://localhost:8000/api/documentation
 
 ### You can also view the custom API documentation by clicking on the link below:
 
-- [Custom API Documentation](https://glensd.github.io/newsaggregator-api/)
+-    **[Custom API Documentation](https://glensd.github.io/newsaggregator-api/)**
 
 
+
+## Swagger Documentation Screenshot
+Below is a sample screenshot of the Swagger documentation interface, illustrating the API endpoints and request/response structures. Note that only a few representative screenshots are attached; full documentation is available through Swagger.
+<div>
+<img width="150" alt="Screenshot 2024-10-29 at 3 57 54 PM" src="https://github.com/user-attachments/assets/94bfd102-cc83-4c96-8ce9-d651de03e571">
+<img width="150" alt="Screenshot 2024-10-29 at 3 58 03 PM" src="https://github.com/user-attachments/assets/36fa8a68-d508-4e98-9c62-113e5d506925">
+<img width="150" alt="Screenshot 2024-10-29 at 3 58 41 PM" src="https://github.com/user-attachments/assets/bba99ac3-ec33-4461-bf42-0b805b6ac73f">
+<img width="150" alt="Screenshot 2024-10-29 at 3 59 56 PM" src="https://github.com/user-attachments/assets/f592ca50-fdd6-4c9e-b6f3-4e7b78a4752f">
+<img width="150" alt="Screenshot 2024-10-29 at 4 00 20 PM" src="https://github.com/user-attachments/assets/3b69496d-c2cf-4493-b878-35d26c8e6c26">
+<img width="150" alt="Screenshot 2024-10-29 at 4 00 35 PM" src="https://github.com/user-attachments/assets/c2063d2c-dcca-42f5-b32b-ca1774c5a208">
+<img width="150" alt="Screenshot 2024-10-29 at 4 04 53 PM" src="https://github.com/user-attachments/assets/925651d7-e638-47b8-82ed-742d5e380f32">
+<img width="150" alt="Screenshot 2024-10-29 at 4 05 10 PM" src="https://github.com/user-attachments/assets/c7f8f291-6e6a-420c-859e-c04b44f99b7c">
+<img width="150" alt="Screenshot 2024-10-29 at 4 06 10 PM" src="https://github.com/user-attachments/assets/a95a2cc6-8ccb-4945-9294-d623d0417adc">
+<img width="150" alt="Screenshot 2024-10-29 at 4 20 37 PM" src="https://github.com/user-attachments/assets/f9b5aafe-a917-41b0-8ae1-4a779160e084">
+<img width="150" alt="Screenshot 2024-10-29 at 4 20 52 PM" src="https://github.com/user-attachments/assets/9023f283-377e-4cc1-a78a-95c3e0a4e305">
+<img width="150" alt="Screenshot 2024-10-29 at 4 21 17 PM" src="https://github.com/user-attachments/assets/f16eeb2a-9b7e-4472-8758-60f75c932f09">
+<img width="150" alt="Screenshot 2024-10-29 at 4 23 06 PM" src="https://github.com/user-attachments/assets/4914957b-4053-42dd-9473-d47fc8b54519">
+<img width="150" alt="Screenshot 2024-10-29 at 4 12 40 PM" src="https://github.com/user-attachments/assets/c449d19f-5993-4c81-a695-63571e8333ab">
+<img width="150" alt="Screenshot 2024-10-29 at 4 12 50 PM" src="https://github.com/user-attachments/assets/03dfc3d0-b84c-4bba-b330-3710646883e8">
+<img width="150" alt="Screenshot 2024-10-29 at 4 10 15 PM" src="https://github.com/user-attachments/assets/ea4b49a6-dfa1-4b70-97da-88354a34b937">
+<img width="150" alt="Screenshot 2024-10-29 at 4 10 31 PM" src="https://github.com/user-attachments/assets/dc68af59-c214-4121-9f79-7c6a5555894f">
+<img width="150" alt="Screenshot 2024-10-29 at 4 10 54 PM" src="https://github.com/user-attachments/assets/ef0e38d3-f5fa-4a55-b424-10a478aa8a4c">
+<img width="150" alt="Screenshot 2024-10-29 at 4 11 08 PM" src="https://github.com/user-attachments/assets/acfa4ee9-835a-4dc3-b16b-0073ebb27e61">
+<img width="150" alt="Screenshot 2024-10-29 at 4 14 49 PM" src="https://github.com/user-attachments/assets/15bc5154-d103-4dd1-a5dd-33a950cbbf2a">
+<img width="150" alt="Screenshot 2024-10-29 at 4 15 05 PM" src="https://github.com/user-attachments/assets/da8db125-dadc-4e9c-94ba-84f4a0075bc1">
+<img width="150" alt="Screenshot 2024-10-29 at 4 16 47 PM" src="https://github.com/user-attachments/assets/c80afc9d-b087-44b4-b5b2-dc93379ba430">
+<img width="150" alt="Screenshot 2024-10-29 at 4 17 06 PM" src="https://github.com/user-attachments/assets/db39db4f-9c87-4f8f-af80-cb2247e31a75">
+<img width="150" alt="Screenshot 2024-10-29 at 4 18 38 PM" src="https://github.com/user-attachments/assets/c5d6e9a0-101b-4843-983c-95047a253cf9">
+<img width="150" alt="Screenshot 2024-10-29 at 4 18 57 PM" src="https://github.com/user-attachments/assets/1dcc4b6c-93c4-488a-b2b1-1998b7319ae6">
+<img width="150" alt="Screenshot 2024-10-29 at 4 25 51 PM" src="https://github.com/user-attachments/assets/58f48579-527b-4c52-939d-9d8ebdfcfa86">
+<img width="150" alt="Screenshot 2024-10-29 at 4 26 00 PM" src="https://github.com/user-attachments/assets/00646787-dcf7-4490-ae9c-8ff317aa3e1a">
+<img width="150" alt="Screenshot 2024-10-29 at 4 26 18 PM" src="https://github.com/user-attachments/assets/5dac8937-250c-48a1-8fe4-b25e535631a3">
+</div>
+  
+## Email Testing
+For testing email functionality, including the forgot password feature, the application uses **Mailtrap**.
+Ensure your Mailtrap credentials are set in the .env file.
 
 ## Testing
 ### Summary of Test Cases
