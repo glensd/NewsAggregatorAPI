@@ -159,6 +159,50 @@ Below is a summary of the API test cases and their status:
     - Test case: Attempt to logout with invalid email
     - Status: Passed ✅
 
+Categories API
+* Get Categories (/api/categories)
+    * Test case: Successfully retrieves categories
+    * Status: Passed ✅
+
+Articles API
+* Show Article (/api/articles/{id})
+    * Test case: Successfully retrieves an article by ID
+    * Status: Passed ✅
+  
+
+* Index Articles (/api/articles)
+    * Test case: Fetch all articles, with optional filtering by category and author.
+    * Status: Passed ✅
+
+
+* Index Articles with Keyword Filter
+    * Test case: Successfully retrieves articles filtered by keyword
+    * Status: Passed ✅
+
+
+* Index Articles with Category Filter
+    * Test case: Successfully retrieves articles filtered by category
+    * Status: Passed ✅
+
+
+* User Personalized Feed (/api/user-personalized-feed/)
+  * Test case: Successfully retrieves personalized news feeds based on user preferences
+  * Status: Passed ✅
+
+
+* Store User Preferences (/api/preferences)
+  * Test case: Successfully saves user preferences for personalized news feeds
+  * Status: Passed ✅
+
+ 
+* Get User Preferences (/api/preferences)
+  * Test case: Successfully retrieves user preferences
+  * Status: Passed ✅
+
+
+Fetch Articles Command
+* Test case: Successfully fetches articles from various news sources and stores them in the database
+* Status: Passed ✅
 ## Running Test Cases
 To run all test cases at once, use the following command:
 ```bash
@@ -173,6 +217,11 @@ To run individual test cases, use the --filter option with the specific test cas
 ```bash
     php artisan test --filter test_successful_login
 ```
+
+### Below are the screenshots of test cases run
+<img width="1350" alt="Screenshot 2024-10-29 at 10 20 10 AM" src="https://github.com/user-attachments/assets/4643caef-960e-4284-a87f-86c8c1c8de51">
+<img width="1321" alt="Screenshot 2024-10-29 at 10 21 29 AM" src="https://github.com/user-attachments/assets/3ff0e26e-bfd0-49f3-aa7c-f2d9f9e3a3f8">
+
 ## License
 This project is licensed under the MIT License.
 
