@@ -14,6 +14,9 @@ The News Aggregator API is a backend service built with Laravel that allows user
 - [Testing](#testing)
 - [License](#license)
 
+## Screenshots
+<img width="300" alt="Screenshot 2024-10-29 at 1 02 57 PM" src="https://github.com/user-attachments/assets/71ff3e7d-b676-44df-b8e9-38038f6ba213">
+
 ## Features
 - User authentication (registration, login, logout, password reset)
 - Article management (fetch, store, update, and retrieve articles)
